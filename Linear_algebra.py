@@ -76,7 +76,7 @@ def eigenvector(m, need_to_print=True):              # поиск собстве
 
 def characteristic_polinom(m):                # вывод характеристического полинома
     if len(m) != len(m[0]):
-        return 'й ой, так нельзя'
+        return 'Ой ой, так нельзя'
     else:
         a = str(-1) + 'xxx'
         b = '+' + str(m[2][2] + m[0][0] + m[1][1]) + 'xx'
