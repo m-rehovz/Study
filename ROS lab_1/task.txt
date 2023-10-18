@@ -1,0 +1,2 @@
+Сreate two nodes that send one number each to the third node, which adds these two numbers and displays them on the screen. Node1 and node3 send a number, node2 receives them.
+The Robot Operating System (ROS)
