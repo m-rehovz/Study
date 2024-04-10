@@ -65,6 +65,15 @@ tform = affine2d(T);
 I_rotate = imwarp(I , tform);
 printComparison(I, I_rotate, "Поворот на 28° против часовой стрелки")
 
+%% АФФИННОЕ ОТОБРАЖЕНИЕ
+
+I = imread('kot.jpg');
+srcPoints = [10, 10; 100, 20; 30, 200];    % исходные точки на изображении
+dstPoints = [50, 5; 200, 110; 15, 250];    % точки после преобразования
+tform = fitgeotrans(srcPoints, dstPoints, 'affine');  % вычисление матрицы преобразования
+resultI = imwarp(I, tform);   % применение аффинного отображения
+printComparison(I,resultI, "Аффинное отображение")
+
 %% СКОС ИЗОБРАЖЕНИЯ (s = 0.4)
 
 I = imread("cat2.png");
